@@ -1,0 +1,120 @@
+.circles-container {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 40%;
+    height: 50%;
+    background: rgb(6, 82, 221);
+    /* filter: blur(274px); */
+    filter: blur(187px);
+}
+
+
+/* animation for all browsers */
+
+.circle {
+    animation-duration: 33s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    offset-path: ellipse(35% 35%);
+    animation-timing-function: ease-in-out;
+}
+
+.first-circle {
+    animation-name: spin;
+}
+
+.second-circle {
+    animation-name: spin2;
+}
+
+@keyframes spin {
+    0% {
+        offset-distance: 0%;
+    }
+    100% {
+        offset-distance: 100%;
+    }
+}
+
+@keyframes spin2 {
+    0% {
+        offset-distance: -50%;
+    }
+    100% {
+        offset-distance: 50%;
+    }
+}
+
+@media (max-width:552px) {
+    .circle {
+        offset-path: ellipse(20% 20%);
+        filter: blur(100px);
+    }
+}
+
+
+/* animation for safari */
+
+@supports (overflow:-webkit-marquee) and (justify-content:inherit) {
+    .circle {
+        top: 0%;
+        left: 0%;
+    }
+    .circle {
+        animation-duration: 33s;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
+        offset-path: path('M0 419C0 187.593 187.593 0 419 0H1501C1732.41 0 1920 187.593 1920 419V561C1920 792.407 1732.41 980 1501 980H419C187.593 980 0 792.407 0 561V419Z');
+        animation-timing-function: ease-in-out;
+    }
+    .second-circle {
+        animation-name: spin;
+    }
+    .second-circle {
+        animation-name: spin2;
+    }
+    @keyframes spin {
+        from {
+            offset-distance: 0%;
+        }
+        to {
+            offset-distance: 100%;
+        }
+    }
+    @keyframes spin2 {
+        from {
+            offset-distance: -50%;
+        }
+        to {
+            offset-distance: 50%;
+        }
+    }
+    @media (max-width:1400px) {
+        .circle {
+            offset-path: path('M0 222C0 99.3928 99.3928 0 222 0H802C924.607 0 1024 99.3928 1024 222V378C1024 500.607 924.607 600 802 600H222C99.3928 600 0 500.607 0 378V222Z');
+        }
+    }
+    @media (max-width:1000px) {
+        .circle {
+            offset-path: path('M0 186C0 83.275 83.275 0 186 0H454C556.725 0 640 83.275 640 186V534C640 636.725 556.725 720 454 720H186C83.275 720 0 636.725 0 534V186Z');
+        }
+    }
+    @media (max-width:600px) {
+        .circle {
+            offset-path: path('M0 97C0 43.4284 43.4284 0 97 0H223C276.572 0 320 43.4284 320 97V397C320 450.572 276.572 494 223 494H97C43.4284 494 0 450.572 0 397V97Z');
+        }
+    }
+}

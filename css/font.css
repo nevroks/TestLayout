@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Geometria-bold";
+    src: url("./../assets/fonts/geometria/geometria_bold.otf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Geometria-medium";
+    src: url("./../assets/fonts/geometria/geometria_medium.otf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Geometria-light";
+    src: url("./../assets/fonts/geometria/geometria_light.otf");
+    font-style: normal;
+}

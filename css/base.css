@@ -1,0 +1,250 @@
+/* -----titles----- */
+
+h2,
+h3 {
+    font-family: "Geometria-bold";
+}
+
+h2 {
+    font-size: 62px;
+    line-height: 78px;
+}
+
+h3 {
+    font-size: 36px;
+    line-height: 45px;
+}
+
+
+/* -----titles----- */
+
+
+/* -----text----- */
+
+.text-medium {
+    font-family: "Geometria-light";
+    font-size: 26px;
+    line-height: 33px;
+}
+
+.text-small {
+    font-size: 22px;
+    font-family: "Geometria-light";
+    line-height: 28px;
+}
+
+
+/* -----text----- */
+
+
+/* -----ui----- */
+
+.button {
+    font-family: 'Geometria-medium';
+    font-size: 20px;
+    line-height: 25px;
+    padding: 16px 70px;
+    border-radius: 20px;
+    height: fit-content;
+    position: relative;
+}
+
+.button:active {
+    bottom: -2px;
+}
+
+.button.filled {
+    background-color: var(--accent-color);
+    transition: all 0.4s;
+}
+
+.button.filled:hover {
+    background-color: rgb(6, 66, 177);
+}
+
+.button.outlined {
+    font-family: "Geometria-light";
+    border: 1px solid var(--main-font-color);
+}
+
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+input[type="checkbox"]:checked+label,
+input[type="checkbox"]:not(:checked)+label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked+label:before,
+input[type="checkbox"]:not(:checked)+label:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: -4px;
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+}
+
+input[type="checkbox"]:checked+label:before {
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+input[type="checkbox"]:checked+label:after,
+input[type="checkbox"]:not(:checked)+label:after {
+    content: url('');
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked+label:after,
+input[type="checkbox"]:not(:checked)+label:after {
+    content: url('./../assets/checkMark.svg');
+    left: 7px;
+    top: 1px;
+}
+
+input[type="checkbox"]:not(:checked)+label:after,
+input[type="radio"]:not(:checked)+label:after {
+    opacity: 0;
+}
+
+
+/* -----ui----- */
+
+
+/* content width 1640px*/
+
+header,
+footer,
+section {
+    padding: 0 calc(50% - 820px);
+}
+
+@media (min-width:2400px) {
+    header,
+    footer,
+    section {
+        padding: 0 calc(50% - 1100px);
+    }
+    h2 {
+        font-size: 82px;
+        line-height: 88px;
+    }
+    h3 {
+        font-size: 56px;
+        line-height: 55px;
+    }
+    .text-medium {
+        font-family: "Geometria-light";
+        font-size: 36px;
+        line-height: 33px;
+    }
+    .text-small {
+        font-size: 32px;
+        font-family: "Geometria-light";
+        line-height: 28px;
+    }
+    .button {
+        font-size: 30px;
+        line-height: 35px;
+        padding: 20px 70px;
+    }
+}
+
+
+/* content width 1024px*/
+
+@media (max-width:1700px) {
+    header,
+    footer,
+    section {
+        padding: 0 calc(50% - 700px);
+    }
+}
+
+@media (max-width:1400px) {
+    header,
+    footer,
+    section {
+        padding: 0 calc(50% - 470px);
+    }
+    h2 {
+        font-size: 42px;
+        line-height: 120%;
+    }
+    h3 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .text-medium {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .text-small {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .button {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        padding: 12px 60px;
+        border-radius: 16px;
+    }
+}
+
+
+/* content width 640px*/
+
+@media (max-width:940px) {
+    header,
+    footer,
+    section {
+        padding: 0 calc(50% - 276px);
+    }
+}
+
+@media (max-width:552px) {
+    header,
+    footer,
+    section {
+        padding: 0 calc(50% - 150px);
+    }
+    .text-small {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 15px;
+    }
+    .text-medium {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 15px;
+    }
+    .button {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 18px;
+    }
+    h2 {
+        font-size: 30px;
+        line-height: 120%;
+    }
+    h3 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
